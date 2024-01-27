@@ -10,7 +10,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      <main className='w-full max-w-7xl mx-auto px-4 h-full'>{children}</main>
+      <main className='w-full'>{children}</main>
       <Footer />
     </>
   );

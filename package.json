@@ -13,6 +13,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@headlessui/react": "^1.7.18",
     "@mui/icons-material": "^5.15.6",
     "@mui/material": "^5.15.6",
     "@remix-run/css-bundle": "^2.5.1",
@@ -22,6 +23,7 @@
     "boxicons": "^2.1.4",
     "clsx": "^2.1.0",
     "isbot": "^4.1.0",
+    "keen-slider": "^6.8.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
