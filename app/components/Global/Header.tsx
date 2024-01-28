@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { Phone } from '@mui/icons-material';
+import { Link } from '@remix-run/react';
 
 const Header = () => {
   return (
@@ -9,11 +10,13 @@ const Header = () => {
           'w-full max-w-7xl mx-auto px-4 flex justify-between items-center'
         )}>
         {/* Logo */}
-        <h1>JIWLA</h1>
+        <Link to='/'>
+          <h1>JIWLA</h1>
+        </Link>
         {/* Contact */}
         <div className={clsx('flex items-center gap-1')}>
           <Phone fontSize='small' />
-          <p>123.456.7890</p>
+          <p className='font-roboto font-light'>123.456.7890</p>
         </div>
       </div>
     </div>

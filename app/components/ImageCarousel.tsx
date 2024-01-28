@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react.js';
 import { useState } from 'react';
-import { SAMPLE_IMAGES } from '~/media/images';
+import { PROJECT_IMAGES } from '~/media/projects';
 import { ChevronRightRounded } from '@mui/icons-material';
 
 export const ImageCarousel = () => {
@@ -55,7 +55,7 @@ export const ImageCarousel = () => {
       <div
         className='keen-slider w-full h-full max-h-[400px] sm:max-h-[500px] lg:max-h-[600px] transition-all duration-200'
         ref={sliderRef}>
-        {SAMPLE_IMAGES.map((image) => {
+        {PROJECT_IMAGES.map((image) => {
           return (
             <img
               key={image}
@@ -78,9 +78,7 @@ export const ImageCarousel = () => {
               e.stopPropagation() || instanceRef.current?.prev()
             }
             className={clsx(
-              'hidden group-hover:flex transition-all duration-200 ease-out',
-              `absolute top-1/2 -translate-y-1/2 z-50 border-2 border-white rounded-full hover:bg-white/20`,
-              'left-2 sm:left-4 md:left-12 lg:left-16 p-4'
+              'hidden opacity-0 group-hover:opacity-100 group-hover:flex transition-all duration-200 ease-out absolute top-1/2 -translate-y-1/2 z-50 border-2 border-white rounded-full hover:bg-white/20 left-2 sm:left-4 md:left-12 lg:left-16 p-4'
             )}>
             <ChevronRightRounded className='h-6 w-6 scale-x-[-1] text-white' />
           </button>

@@ -5,14 +5,15 @@ import Testimonial from '~/components/Testimonial';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'JIWLA Construction' },
-    { name: 'description', content: 'JIWLA Construction' },
+    { title: 'JIWLA Construction - Ladders' },
+    { name: 'description', content: 'JIWLA Construction - Ladders' },
   ];
 };
 
-export default function Index() {
+export default function Ladders() {
   return (
     <div className='h-full min-h-[400px] lg:min-h-[600px] w-full'>
+      <h2>LADDERS</h2>
       <ImageCarousel />
       <Testimonial />
       <ImageGrid />
