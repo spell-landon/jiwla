@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className='h-full min-h-[400px] lg:min-h-[600px] w-full'>
+    <div className='h-full'>
       <ImageCarousel />
       <Testimonial />
       <ImageGrid />

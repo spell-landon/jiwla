@@ -5,7 +5,7 @@ import map from '~/media/map.png';
 
 const Footer = () => {
   return (
-    <div className={clsx('w-full py-2 bg-gray-200')}>
+    <div className={clsx('w-full py-2 bg-gray-200 text-primary')}>
       <div
         className={clsx(
           'w-full max-w-7xl mx-auto px-4 py-8 flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16'
@@ -14,7 +14,7 @@ const Footer = () => {
           <span>JIWLA Construction</span>
           {/* Contact */}
           <div className={clsx('flex items-center gap-1')}>
-            <Phone fontSize='small' />
+            <Phone fontSize='small' className='text-primary' />
             <p className='font-roboto font-light'>123.456.7890</p>
           </div>
         </div>

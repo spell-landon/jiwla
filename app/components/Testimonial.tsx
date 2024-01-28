@@ -1,4 +1,3 @@
-import React from 'react';
 import { FoundationRounded } from '@mui/icons-material';
 
 const Testimonial = () => {
@@ -10,9 +9,9 @@ const Testimonial = () => {
           nisi ut aliquip ex ea commodo consequat.
         </span>
         <div className='flex gap-2 items-center'>
-          <div className='bg-black/50 h-[1px] w-[10vw]' />
-          <FoundationRounded className='h-6 w-6 text-black/50' />
-          <div className='bg-black/50 h-[1px] w-[10vw]' />
+          <div className='bg-primary/50 h-[1px] w-[10vw]' />
+          <FoundationRounded className='h-6 w-6 text-primary/50' />
+          <div className='bg-primary/50 h-[1px] w-[10vw]' />
         </div>
       </div>
     </div>

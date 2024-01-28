@@ -1,16 +1,26 @@
-import { Link } from '@remix-run/react';
 import clsx from 'clsx';
-
-import { PROJECTS } from '~/media/projects';
+import { useState } from 'react';
+import { SlideshowLightbox } from 'lightbox.js-react';
+import { PROJECTS, Project } from '~/media/projects';
+import 'lightbox.js-react/dist/index.css';
 
 const ImageGrid = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [currentProject, setCurrentProject] = useState(PROJECTS[0]);
+  const handleClick = (project: Project) => {
+    setCurrentProject(project);
+    setIsOpen(true);
+  };
+
   return (
-    <div className={clsx('w-full grid grid-cols-1', 'md:grid-cols-3')}>
+    <div
+      className={clsx('w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3')}>
       {PROJECTS.map((project) => {
         const image = project.images[0];
         return (
-          <Link
-            to={project.to}
+          <button
+            key={image}
+            onClick={() => handleClick(project)}
             className='relative group w-full aspect-square overflow-hidden transition-all duration-200 ease-out'>
             <img
               key={image}
@@ -20,12 +30,27 @@ const ImageGrid = () => {
               alt=''
               src={image}
             />
-            <div className='hidden absolute inset-0 group-hover:flex justify-center items-center bg-black/30 backdrop-blur-sm transition-all duration-200 ease-out'>
-              <span className='text-white font-semibold'>{project.label}</span>
+            <div className='flex md:hidden absolute inset-0 md:group-hover:flex justify-center items-center bg-primary/30 backdrop-blur-sm transition-all duration-200 ease-out'>
+              <span className='text-white font-semibold text-xl md:text-lg'>
+                {project.label}
+              </span>
             </div>
-          </Link>
+          </button>
         );
       })}
+
+      <SlideshowLightbox
+        images={currentProject.images.map((image) => {
+          return { src: image, alt: image };
+        })}
+        showThumbnails={true}
+        open={isOpen}
+        lightboxIdentifier='lbox1'
+        theme='lightbox'
+        slideshowInterval={5000}
+        onClose={() => {
+          setIsOpen(false);
+        }}></SlideshowLightbox>
     </div>
   );
 };

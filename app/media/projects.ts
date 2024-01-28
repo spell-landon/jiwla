@@ -24,15 +24,29 @@ export const PROJECT_IMAGES = [
   ladder_1,
 ];
 
-export const PROJECTS = [
+export type Project = {
+  label: string;
+  images: string[];
+};
+
+export const PROJECTS: Project[] = [
   {
     label: 'Stairs',
     images: [stairs_1, stairs_2, stairs_3, stairs_4, stairs_5],
-    to: '/projects/stairs',
   },
   {
     label: 'Ladders',
     images: [ladder_1],
-    to: '/projects/ladders',
+  },
+];
+
+export const SAMPLE_PROJECTS: Project[] = [
+  {
+    label: 'Stairs',
+    images: SAMPLE_IMAGES,
+  },
+  {
+    label: 'Ladders',
+    images: [ladder_1],
   },
 ];
