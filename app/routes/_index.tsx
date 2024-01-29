@@ -2,12 +2,13 @@ import type { MetaFunction } from '@remix-run/node';
 import { ImageCarousel } from '~/components/ImageCarousel';
 import ImageGrid from '~/components/ImageGrid';
 import Testimonial from '~/components/Testimonial';
-import { COMPANY_NAME } from '~/lib/const';
+import { COMPANY_INFO } from '~/lib/const';
 
 export const meta: MetaFunction = () => {
+  const { companyName } = COMPANY_INFO;
   return [
-    { title: `${COMPANY_NAME} Construction` },
-    { name: 'description', content: `${COMPANY_NAME} Construction` },
+    { title: `${companyName} Construction` },
+    { name: 'description', content: `${companyName} Construction` },
   ];
 };
 

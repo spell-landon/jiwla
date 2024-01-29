@@ -43,8 +43,13 @@ import railing from '~/media/exterior/railing.jpg';
 import ladder_1 from '~/media/exterior/ladder_1.jpg';
 import ladder_2 from '~/media/exterior/ladder_2.jpg';
 
-export const PHONE_NUMBER = '(555) 555-5555';
-export const COMPANY_NAME = 'JIWLA';
+export const COMPANY_INFO = {
+  companyName: 'JIWLA',
+  phoneNumber: '(555) 555-5555',
+  emailAddress: 'info@jiwlaconstruction.com',
+  address: '123 S. Main St. #555, Austin, TX 78759',
+  addressUrl: 'https://maps.app.goo.gl/JSATR1L4EPXkNVvH8',
+};
 
 export type Project = {
   label: string;
