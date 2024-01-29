@@ -14,25 +14,27 @@ const ImageGrid = () => {
 
   return (
     <div
-      className={clsx('w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3')}>
+      className={clsx(
+        'w-full grid grid-cols-1 sm:grid-cols-2 max-w-7xl mx-auto sm:rounded-2xl sm:overflow-hidden'
+      )}>
       {PROJECTS.map((project) => {
-        const image = project.images[0];
+        const { thumbnail, label } = project;
         return (
           <button
-            key={image}
+            key={thumbnail}
             onClick={() => handleClick(project)}
             className='relative group w-full aspect-square overflow-hidden transition-all duration-200 ease-out'>
             <img
-              key={image}
+              key={thumbnail}
               className={clsx(
                 'w-full object-center object-cover inline-block aspect-square md:group-hover:scale-110 transition-all duration-200 ease-out'
               )}
               alt=''
-              src={image}
+              src={thumbnail}
             />
             <div className='flex flex-col visible opacity-100 md:invisible md:opacity-0 absolute inset-0 md:group-hover:flex md:group-hover:opacity-100 md:group-hover:visible justify-center items-center bg-primary/30 backdrop-blur-sm transition-all duration-200 ease-out gap-2'>
               <span className={clsx('text-white font-semibold text-xl')}>
-                {project.label}
+                {label}
               </span>
               <div className='px-5 py-2 font-normal text-base border border-white text-white bg-transparent hover:bg-white/20 transition-all duration-200 ease-out'>
                 View
@@ -46,7 +48,7 @@ const ImageGrid = () => {
         images={currentProject.images.map((image) => {
           return { src: image, alt: image };
         })}
-        showThumbnails={true}
+        showThumbnails={false}
         open={isOpen}
         lightboxIdentifier='lbox1'
         theme='lightbox'

@@ -49,9 +49,8 @@ export const ImageCarousel = () => {
       },
     ]
   );
-
   return (
-    <div className='relative group'>
+    <div className='relative group w-full sm:max-w-7xl sm:mx-auto sm:rounded-2xl sm:overflow-hidden'>
       <div
         className='keen-slider w-full h-full max-h-[400px] sm:max-h-[500px] lg:max-h-[600px] transition-all duration-200'
         ref={sliderRef}>

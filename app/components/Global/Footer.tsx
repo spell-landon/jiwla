@@ -9,7 +9,7 @@ import jiwla_logo_gray from '~/media/jiwla_logo_gray.png';
 const Footer = () => {
   const { isMobile } = useWindowDimensions();
   return (
-    <div className={clsx('w-full py-2 bg-gray-200 text-primary')}>
+    <div className={clsx('w-full py-2 bg-gray-200 text-primary sm:mt-8')}>
       <div
         className={clsx(
           'w-full max-w-7xl mx-auto px-4 py-8 flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16'
