@@ -43,7 +43,7 @@ import railing from '~/media/exterior/railing.jpg';
 import ladder_1 from '~/media/exterior/ladder_1.jpg';
 import ladder_2 from '~/media/exterior/ladder_2.jpg';
 
-export const PHONE_NUMBER = '123.456.7890';
+export const PHONE_NUMBER = '(555) 555-5555';
 export const COMPANY_NAME = 'JIWLA';
 
 export type Project = {
