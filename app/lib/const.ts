@@ -50,7 +50,7 @@ export const COMPANY_INFO = {
   phoneNumber: '(909) 815-7934',
   emailAddress: 'dpara@jiwla.com',
   address: '2949 S.Vineyard Ave,</br>Ontario, CA 91761',
-  addressUrl: 'https://maps.app.goo.gl/JSATR1L4EPXkNVvH8',
+  addressUrl: 'https://maps.app.goo.gl/nhsy5EPGgmCFojTb9',
   license: {
     title: 'CSLB',
     number: '1065387',
