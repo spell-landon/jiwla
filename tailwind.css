@@ -20,12 +20,6 @@
 
 :root {
   --color-primary: 52 58 64;
-}
-
-@layer base {
-  html {
-    font-family: Raleway, Helvetica Neue, ui-sans-serif, system-ui,
-      -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-    font-weight: 200;
-  }
+  --color-secondary: 135 65 66;
+  --color-tertiary: 216 200 188;
 }

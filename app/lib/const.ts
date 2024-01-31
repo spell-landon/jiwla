@@ -44,12 +44,26 @@ import ladder_1 from '~/media/exterior/ladder_1.jpg';
 import ladder_2 from '~/media/exterior/ladder_2.jpg';
 
 export const COMPANY_INFO = {
-  companyName: 'JIWLA',
-  phoneNumber: '(555) 555-5555',
-  emailAddress: 'info@jiwlaconstruction.com',
-  address: '123 S. Main St. #555, Austin, TX 78759',
+  companyName: 'Journeyman Iron Works Inc',
+  companyNameShort: 'JIWLA',
+  slogan: 'Quality Retrofit, Erection and Fabrication',
+  phoneNumber: '(909) 815-7934',
+  emailAddress: 'dpara@jiwla.com',
+  address: '2949 S.Vineyard Ave,</br>Ontario, CA 91761',
   addressUrl: 'https://maps.app.goo.gl/JSATR1L4EPXkNVvH8',
+  license: {
+    title: 'CSLB',
+    number: '1065387',
+  },
+  employees: [
+    {
+      name: 'Daniel A Para',
+      position: 'President',
+    },
+  ],
 };
+
+export const TESTIMONIAL_TEXT = `${COMPANY_INFO.companyName} brings architectural visions to life with unparalleled craftsmanship in iron works.`;
 
 export type Project = {
   label: string;

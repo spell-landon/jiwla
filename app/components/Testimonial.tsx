@@ -1,14 +1,12 @@
 import { FoundationRounded } from '@mui/icons-material';
-import { COMPANY_INFO } from '~/lib/const';
+import { TESTIMONIAL_TEXT } from '~/lib/const';
 
 const Testimonial = () => {
-  const { companyName } = COMPANY_INFO;
   return (
     <div className='w-full max-w-sm sm:max-w-7xl mx-auto py-16 px-4'>
       <div className='flex flex-col gap-6 items-center justify-center'>
-        <span className='text-center font-normal'>
-          {companyName} Construction brings architectural visions to life with
-          unparalleled craftsmanship in iron works.
+        <span className='text-center font-normal w-full md:w-3/4 lg:w-1/2'>
+          {TESTIMONIAL_TEXT}
         </span>
         <div className='flex gap-2 items-center'>
           <div className='bg-primary/50 h-[1px] w-[10vw]' />

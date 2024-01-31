@@ -16,9 +16,9 @@ export default function Contact() {
   const { phoneNumber, emailAddress, address, addressUrl } = COMPANY_INFO;
   const { isMobile } = useWindowDimensions();
   return (
-    <div className='w-full flex flex-col font-raleway'>
+    <div className='w-full flex flex-col'>
       <iframe
-        src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13758.621855799296!2d-97.774271!3d30.445867449999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1706503051081!5m2!1sen!2sus'
+        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.9291406074235!2d-117.6129213880474!3d34.02002977305734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c334cd039d3f17%3A0x9812e73bf0bab2f2!2s2949%20S%20Vineyard%20Ave%2C%20Ontario%2C%20CA%2091761!5e0!3m2!1sen!2sus!4v1706670308818!5m2!1sen!2sus'
         height='400'
         style={{ border: '0px', width: '100%' }}
         allowFullScreen={true}
@@ -30,23 +30,21 @@ export default function Contact() {
           <div className='flex flex-col gap-4'>
             <span className='font-medium'>Contact Info</span>
             <div className='flex flex-col text-primay/80 gap-2'>
-              <div className={clsx('flex items-center gap-1')}>
+              <div className={clsx('flex items-center gap-1 font-Sono')}>
                 <Phone fontSize='small' className='text-primary/80' />
                 {isMobile ? (
-                  <a
-                    href={`tel:${phoneNumber}`}
-                    className='font-roboto font-light'>
+                  <a href={`tel:${phoneNumber}`} className='font-light'>
                     {phoneNumber}
                   </a>
                 ) : (
-                  <p className='font-roboto font-light'>{phoneNumber}</p>
+                  <p className='font-light'>{phoneNumber}</p>
                 )}
               </div>
               <div className={clsx('flex items-center gap-1')}>
                 <MailOutline fontSize='small' className='text-primary/80' />
                 <a
                   href={`mailto:${emailAddress}`}
-                  className='font-roboto font-light text-[#6484A0]'>
+                  className='font-Sono font-light text-[#6484A0]'>
                   {emailAddress}
                 </a>
               </div>
@@ -57,9 +55,9 @@ export default function Contact() {
             <span className='font-medium'>Address</span>
             <a
               href={addressUrl}
-              className='font-roboto font-light text-[#6484A0]'>
-              {address}
-            </a>
+              className='font-Sono font-light text-[#6484A0]'
+              dangerouslySetInnerHTML={{ __html: address }}
+            />
           </div>
         </div>
       </div>

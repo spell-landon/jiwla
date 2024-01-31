@@ -10,6 +10,10 @@ import {
 } from '@remix-run/react';
 import tailwindStylesheet from '../tailwind.css';
 import Layout from './components/Global/Layout';
+import favicon_16_16 from '../public/favicon-16x16.png';
+import favicon_32_32 from '../public/favicon-32x32.png';
+import site_manifest from '../public/site.webmanifest';
+import apple_touch_icon from '../public/apple-touch-icon.png';
 
 export const links: LinksFunction = () => {
   return [
@@ -28,6 +32,13 @@ export default function App() {
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='apple-touch-icon' sizes='180x180' href={apple_touch_icon} />
+        <link rel='icon' type='image/png' sizes='32x32' href={favicon_32_32} />
+        <link rel='icon' type='image/png' sizes='16x16' href={favicon_16_16} />
+        <link rel='manifest' href={site_manifest} />
+        <meta name='msapplication-TileColor' content='#874142' />
+        <meta name='theme-color' content='#ffffff'></meta>
+
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect'
@@ -35,13 +46,12 @@ export default function App() {
           crossOrigin='true'
         />
         <link
-          href='https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400&display=swap'
-          rel='stylesheet'
-        />
+          href='https://fonts.googleapis.com/css2?family=Sono:wght@300&family=Special+Elite&family=Stardos+Stencil:wght@400;700&family=Teko:wght@300&display=swap'
+          rel='stylesheet'></link>
         <Meta />
         <Links />
       </head>
-      <body className='font-raleway'>
+      <body className='font-SpecialElite bg-tertiary/50'>
         <Layout>
           <Outlet />
           <ScrollRestoration />

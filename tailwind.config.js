@@ -14,10 +14,14 @@ export default {
     extend: {
       colors: {
         primary: withOpacityValue('--color-primary'),
+        secondary: withOpacityValue('--color-secondary'),
+        tertiary: withOpacityValue('--color-tertiary'),
       },
       fontFamily: {
-        raleway: ['"Raleway"', 'sans-serif'],
-        roboto: ['"Roboto"', 'sans-serif'],
+        SpecialElite: ["'Special Elite'", 'system-ui'],
+        StardosStencil: ["'Stardos Stencil'", 'system-ui'],
+        Teko: ["'Teko'", 'system-ui'],
+        Sono: ["'Sono'", 'system-ui'],
       },
       width: {
         '7xl': '1172px',
